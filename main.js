@@ -91,7 +91,21 @@
 
 const btnToggle = document.querySelector(".card_2");
 const navBar = document.querySelector(".navbar-links");
-const navBarClose = document.querySelector(".close-navbar")
+const navBarClose = document.querySelector(".close-navbar");
+const navBarLink = document.querySelectorAll(".link-a");
+const buyCont = document.querySelector(".buy-content");
+const buyContOpen = document.querySelector(".btn-buy-content");
+const buyContClose = document.querySelector(".btn-close-buy-content");
+
+buyContOpen.addEventListener("click", function(){
+    buyCont.style.display = "block";
+})
+buyContClose.addEventListener("click", function(){
+    buyCont.style.display = "none"
+})
+
+
+// var x =window.matchMedia("(max-width: 1600px)")
 
 btnToggle.addEventListener("click", function(){
     // document.getElementsByClassName(".navbar-links").style.display = "block";
@@ -105,13 +119,28 @@ btnToggle.addEventListener("click", function(){
     // navBar.style.marginRight = "10px;"
     navBar.style.right = "0";
     btnToggle.style.marginRight = "450px";
-
+    buyCont.style.right = "550px";
 })
 
 navBarClose.addEventListener("click", function(){
     navBar.style.display = "none";
     btnToggle.style.marginRight = "75px";
+    buyCont.style.right = "165px";
 })
+
+navBarLink.forEach( navBarLink => navBarLink.addEventListener("click", function(){
+    navBar.style.display = "none";
+    btnToggle.style.marginRight = "75px";
+}))
+
+// function myFunction(x, navBar, btnToggle){
+//     if ((x.matches) || (navBar.style.display = "block")){
+//         btnToggle.style.marginRight = "0px"
+//     }
+
+// }
+// myFunction(x, navBar, btnToggle);
+
 
 
 

@@ -59,9 +59,38 @@ header{
 }
 
 .card_2 img{
-    margin-bottom: 7.27px;
+    margin-bottom: 7px;
 }
 
+/* buy-content */
+
+.buy-content{
+    display: none;
+    position: absolute;
+    right: 165px;
+    top: 90px;
+    width: 250px;
+    height: 150px;
+    max-height: 750px;
+    background-color: yellow;
+}
+
+.btn-buy-content{
+    cursor: pointer;
+}
+
+.btn-close-buy-content{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+}
+
+
+/* buy-content end */
 
 /* sliderbar */
 .navbar-links{
@@ -72,9 +101,22 @@ header{
     width: 30vh;
     height: 100vh;
     background-color: #564a4a;
+    opacity: .96;
 }
 
-.navbar-links div{
+.link{
+    max-width: 200px;
+    height: 25px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    flex-wrap: nowrap;
+    
+}
+
+.navbar-links{
+    font-family: 'Goblin One', cursive;
+    font-size: 21px;
+    font-weight: 600;
     transition: color .2s linear;
 }
 
@@ -84,7 +126,17 @@ header{
 
 .close-navbar{
     cursor: pointer;
-    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.close-navbar img{
+    transition: all .25s linear;
+    float: right;
+
+}
+
+.close-navbar img:hover{
+    transform: rotate(180deg);
 }
 
 
